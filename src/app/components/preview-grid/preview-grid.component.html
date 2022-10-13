@@ -1,8 +1,17 @@
 THIS IS COMPONENT
 <p>preview-grid works!</p>
 <!-- PreviewData -->
-<div class="alert alert-warning">
-    <ul>
-        <li *ngFor="let data of PreviewData">{{data.Label}}</li>
-    </ul>
+
+<div class="row">
+    <div class="col-sm-3" *ngFor="let data of PreviewData">
+        <div class="card" style="margin: 4px;">
+            <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+            <div class="card-header">{{data.Label}}</div>
+            <div class="card-body">
+                <!-- <h5 class="card-title">{{data.Label}}</h5> -->
+                <p class="card-text">{{data.Description}}</p>
+                <a href="/{{data.Id}}" class="btn btn-primary">Open</a>
+            </div>
+        </div>
+    </div>
 </div>
